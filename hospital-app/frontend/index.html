@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Appointment Management</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Hospital Appointment Management System</h1>
+
+    <!-- Symptoms Input Section -->
+    <div class="section">
+      <label for="symptoms">Enter Your Symptoms:</label>
+      <input type="text" id="symptoms" placeholder="Enter symptoms like headache, fever, etc.">
+      <button onclick="searchHospitals()">Search Nearby Hospitals</button>
+    </div>
+
+    <!-- Display List of Hospitals -->
+    <div id="hospital-list" class="section"></div>
+
+    <!-- Appointment Section -->
+    <div id="appointment-section" class="section">
+      <h2>Book Appointment</h2>
+      <label for="user-name">Your Name:</label>
+      <input type="text" id="user-name" placeholder="Your name">
+
+      <label for="appointment-time">Appointment Time:</label>
+      <input type="datetime-local" id="appointment-time">
+
+      <button onclick="bookAppointment()">Confirm Appointment</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
